@@ -1,0 +1,15 @@
+package com.wjx.hkfm_mod.init;
+
+import com.wjx.hkfm_mod.objects.item.ItemBase;
+import net.minecraft.item.Item;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Iteminit {
+    public static final List<Item> ITEMS = new ArrayList<>();
+
+    public static final Item HK_Fragment = new ItemBase("honkai_fragment");
+
+
+}
