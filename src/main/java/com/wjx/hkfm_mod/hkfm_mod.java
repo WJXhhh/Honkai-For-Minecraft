@@ -3,6 +3,7 @@ package com.wjx.hkfm_mod;
 import com.wjx.hkfm_mod.proxy.CommonProxy;
 import com.wjx.hkfm_mod.tabs.honkai_tab;
 import com.wjx.hkfm_mod.util.Reference;
+import com.wjx.hkfm_mod.util.handlers.RegistryHandler;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraftforge.fml.common.Mod;
@@ -29,7 +30,7 @@ public class hkfm_mod
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        logger = event.getModLog();
+        RegistryHandler.otherRegistries();
     }
 
     @EventHandler
