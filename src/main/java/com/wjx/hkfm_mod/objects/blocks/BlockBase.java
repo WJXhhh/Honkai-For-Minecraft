@@ -3,7 +3,7 @@ package com.wjx.hkfm_mod.objects.blocks;
 import com.wjx.hkfm_mod.hkfm_mod;
 import com.wjx.hkfm_mod.init.BlockInit;
 import com.wjx.hkfm_mod.init.Iteminit;
-import com.wjx.hkfm_mod.util.IHasModel;
+import com.wjx.hkfm_mod.util.interfaces.IHasModel;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;

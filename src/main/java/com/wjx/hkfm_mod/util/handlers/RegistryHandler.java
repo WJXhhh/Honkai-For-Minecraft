@@ -2,7 +2,7 @@ package com.wjx.hkfm_mod.util.handlers;
 
 import com.wjx.hkfm_mod.init.BlockInit;
 import com.wjx.hkfm_mod.init.Iteminit;
-import com.wjx.hkfm_mod.util.IHasModel;
+import com.wjx.hkfm_mod.util.interfaces.IHasModel;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;

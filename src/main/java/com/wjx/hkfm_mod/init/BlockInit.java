@@ -1,6 +1,7 @@
 package com.wjx.hkfm_mod.init;
 
 import com.wjx.hkfm_mod.objects.blocks.BlockBase;
+import com.wjx.hkfm_mod.objects.blocks.BlockOres;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
@@ -13,4 +14,6 @@ public class BlockInit {
     public static final List<Block> Blocks = new ArrayList<>();
 
     public static final Block BLOCKS_STONE_FOR_HONKAI = new BlockBase("stone_for_honkai", Material.ROCK,honkai_tab);
+
+
 }
