@@ -25,7 +25,7 @@ public class WorldGenCustomOres implements IWorldGenerator {
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
         switch (world.provider.getDimension()){
             case  0:
-                runWorldGenerator(stone_for_honkai,world,random,chunkX,chunkZ,10,50,230);
+                runWorldGenerator(stone_for_honkai,world,random,chunkX,chunkZ,40,40,80);
                 break;
         }
     }
