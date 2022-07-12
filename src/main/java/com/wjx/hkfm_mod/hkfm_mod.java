@@ -36,8 +36,7 @@ public class hkfm_mod
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
-        // some example code
-        logger.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+
     }
     @EventHandler
     public void postinit(FMLPostInitializationEvent event){}
