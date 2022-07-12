@@ -1,7 +1,9 @@
 package com.wjx.hkfm_mod;
 
 import com.wjx.hkfm_mod.proxy.CommonProxy;
+import com.wjx.hkfm_mod.tabs.honkai_tab;
 import com.wjx.hkfm_mod.util.Reference;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -17,6 +19,8 @@ public class hkfm_mod
 {
     @Instance
     public static hkfm_mod instance;
+
+    public static final CreativeTabs honkai_tab = new honkai_tab("honkai_tab");
 
     @SidedProxy(clientSide = Reference.CLIENT,serverSide = Reference.COMMON)
     public static CommonProxy proxy;
