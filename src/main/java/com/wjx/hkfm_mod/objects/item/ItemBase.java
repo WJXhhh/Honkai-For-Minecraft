@@ -7,10 +7,10 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
 public class ItemBase extends Item implements IHasModel {
-    public ItemBase(String name){
+    public ItemBase(String name,CreativeTabs tabs){
         setUnlocalizedName(name);
         setRegistryName(name);
-        setCreativeTab(CreativeTabs.MISC);
+        setCreativeTab(tabs);
 
         Iteminit.ITEMS.add(this);
     }
