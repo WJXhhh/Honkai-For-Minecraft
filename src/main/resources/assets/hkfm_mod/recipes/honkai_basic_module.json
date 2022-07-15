@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+    "BAB",
+    "BBB"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:redstone"
+    },
+    "B": {
+      "item": "hkfm_mod:honkai_energy_wire"
+    }
+  },
+  "result": {
+    "item": "hkfm_mod:honkai_basic_module",
+    "count": 8
+  }
+}

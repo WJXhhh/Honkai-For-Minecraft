@@ -13,6 +13,7 @@ public class Iteminit {
 
     public static final Item HK_Fragment = new ItemBase("honkai_fragment",honkai_tab);
     public static final Item HKE_WIRE = new ItemBase("honkai_energy_wire",honkai_tab);
+    public static final Item HKB_MODULE = new ItemBase("honkai_basic_module",honkai_tab);
 
 
 }
