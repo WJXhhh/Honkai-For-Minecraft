@@ -17,6 +17,8 @@ public class HK_Ores {
 
         public HK_ORE_stone_for_honkai(String name, Material material, CreativeTabs tabs) {
             super(name, material, tabs);
+            this.setHardness(2.5F);
+            this.setHarvestLevel("pickaxe", 1);
         }
 
         @Nonnull
