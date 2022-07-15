@@ -12,6 +12,7 @@ public class Iteminit {
     public static final List<Item> ITEMS = new ArrayList<>();
 
     public static final Item HK_Fragment = new ItemBase("honkai_fragment",honkai_tab);
+    public static final Item HKE_WIRE = new ItemBase("honkai_energy_wire",honkai_tab);
 
 
 }
