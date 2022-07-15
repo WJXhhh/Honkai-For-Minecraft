@@ -3,7 +3,7 @@ package com.wjx.hkfm_mod.util.handlers;
 import com.wjx.hkfm_mod.init.BlockInit;
 import com.wjx.hkfm_mod.init.Iteminit;
 import com.wjx.hkfm_mod.util.interfaces.IHasModel;
-import com.wjx.hkfm_mod.world.gen.WorldGenCustomOres;
+import com.wjx.hkfm_mod.world.gen.WorldGenCustomOres1;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -47,6 +47,6 @@ public class RegistryHandler {
     }
 
     public static void otherRegistries(){
-        GameRegistry.registerWorldGenerator(new WorldGenCustomOres(),0);
+
     }
 }
