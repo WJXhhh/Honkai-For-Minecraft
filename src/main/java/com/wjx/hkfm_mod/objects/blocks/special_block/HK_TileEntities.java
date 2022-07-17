@@ -11,11 +11,16 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextComponentTranslation;
+import net.minecraftforge.items.ItemStackHandler;
 
 public class HK_TileEntities {
     public static class TileEntity_hk_basic_grinder extends TileEntity implements IInventory,ITickable {
         private NonNullList<ItemStack> inventory =NonNullList.<ItemStack>withSize(3,ItemStack.EMPTY);
         private String customName;
+
+        private ItemStack grinding = ItemStack.EMPTY;
+
+        private ItemStackHandler handler = new ItemStackHandler(2);
 
         private int cookTime;
         private int totalCookTime;
@@ -131,7 +136,7 @@ public class HK_TileEntities {
             }
         }
 
-        public void grindItem(){
+        /*public void grindItem(){
             if (this.canGrind()){
                 ItemStack input = (ItemStack) this.inventory.get(0);
                 ItemStack result = HK_machines_recipes.hk_grinderRecipes.getInstance().getGrinderResult((ItemStack) this.inventory.get(0));
@@ -142,7 +147,7 @@ public class HK_TileEntities {
 
                 input.shrink(1);
             }
-        }
+        }*/
 
 
         public boolean isUsableByPlayer(EntityPlayer player) {
@@ -204,6 +209,30 @@ public class HK_TileEntities {
         @Override
         public void update() {
             ItemStack[] inputs = new ItemStack[] {this.inventory.get(0)};
+
+            if(this.canGrind()&&cookTime>0){
+                cookTime++;
+                if (cookTime == totalCookTime){
+                    if(this.inventory.get(1).getCount()>0){
+                        this.inventory.get(1).grow(1);
+                    }
+                    else handler.insertItem(1,grinding,false);
+                    grinding = ItemStack.EMPTY;
+                    cookTime = 0;
+                    return;
+                }
+                else {
+                    if (this.canGrind()){
+                        ItemStack output = HK_machines_recipes.hk_grinderRecipes.getInstance().getGrinderResult(inputs[0]);
+                        if(!output.isEmpty()){
+                            grinding = output;
+                            cookTime++;
+                            inputs[0].shrink(1);
+                            handler.setStackInSlot(0,inputs[0]);
+                        }
+                    }
+                }
+            }
 
         }
     }

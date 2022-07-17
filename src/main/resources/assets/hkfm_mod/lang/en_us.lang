@@ -1,8 +1,12 @@
 item.honkai_fragment.name=Honkai Fragment
 item.honkai_energy_wire.name=Honkai Energy Wire
 item.honkai_basic_module.name=Honkai Basic Module
+item.honkai_dust.name=Honkai Dust
 item.basic_grinder_module.name=Basic Grinder Module
 
 tile.stone_for_honkai.name=Stone Contaminated With Honkai
+tile.hk_basic_grinder.name=Honkai Basic Grinder
 
 itemGroup.honkai_tab=HonKai Mod For Minecraft
+
+container.hk_basic_grinder=Honkai Basic Grinder

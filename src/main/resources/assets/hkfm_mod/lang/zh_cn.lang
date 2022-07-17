@@ -1,7 +1,12 @@
 item.honkai_fragment.name=崩坏碎片
 item.honkai_energy_wire.name=崩坏能传导细线
 item.honkai_basic_module.name=崩坏基础模块
+item.honkai_dust.name=崩坏粉末
+item.basic_grinder_module.name=基础研磨机模块
 
 tile.stone_for_honkai.name=被崩坏能侵蚀的石头
+tile.hk_basic_grinder.name=崩坏基础研磨机
 
 itemGroup.honkai_tab=崩坏-世界
+
+container.hk_basic_grinder=崩坏基础研磨机

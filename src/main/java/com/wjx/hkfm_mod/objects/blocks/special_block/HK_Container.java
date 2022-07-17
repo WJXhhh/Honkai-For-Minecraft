@@ -20,8 +20,8 @@ public class HK_Container {
         public ContainerHk_basic_grinder(InventoryPlayer player, HK_TileEntities.TileEntity_hk_basic_grinder tileentity) {
             this.tileentity = tileentity;
 
-            this.addSlotToContainer(new Slot(tileentity,0,34,41));
-            this.addSlotToContainer(new Special_Slot.hk_basic_grinder_output(player.player, tileentity,1,106,43));
+            this.addSlotToContainer(new Slot(tileentity,0,33,41));
+            this.addSlotToContainer(new Special_Slot.hk_basic_grinder_output(player.player, tileentity,1,105,42));
 
             for(int y =0;y<3;y++){
                 for(int x = 0; x<9;x++){
