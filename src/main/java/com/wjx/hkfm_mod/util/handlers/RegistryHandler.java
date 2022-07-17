@@ -12,6 +12,8 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
+import static com.wjx.hkfm_mod.util.handlers.TileEntityHandler.registerTileEntity;
+
 @Mod.EventBusSubscriber
 public class RegistryHandler {
     @SubscribeEvent
@@ -23,6 +25,7 @@ public class RegistryHandler {
     @SubscribeEvent
     public static void onBlockRegister(RegistryEvent.Register<Block> event){
         event.getRegistry().registerAll(BlockInit.Blocks.toArray(new Block[0]));
+        registerTileEntity();
 
     }
 

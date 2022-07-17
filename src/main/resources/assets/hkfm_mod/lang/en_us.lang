@@ -1,6 +1,7 @@
 item.honkai_fragment.name=Honkai Fragment
 item.honkai_energy_wire.name=Honkai Energy Wire
 item.honkai_basic_module.name=Honkai Basic Module
+item.basic_grinder_module.name=Basic Grinder Module
 
 tile.stone_for_honkai.name=Stone Contaminated With Honkai
 

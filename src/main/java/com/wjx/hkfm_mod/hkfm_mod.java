@@ -3,6 +3,7 @@ package com.wjx.hkfm_mod;
 import com.wjx.hkfm_mod.proxy.CommonProxy;
 import com.wjx.hkfm_mod.tabs.honkai_tab;
 import com.wjx.hkfm_mod.util.Reference;
+import com.wjx.hkfm_mod.util.handlers.GuiHandler;
 import com.wjx.hkfm_mod.util.handlers.RegistryHandler;
 import com.wjx.hkfm_mod.world.gen.WorldGenCustomOres1;
 import com.wjx.hkfm_mod.world.gen.Worldgenore2;
@@ -15,6 +16,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import org.apache.logging.log4j.Logger;
 
@@ -40,6 +42,7 @@ public class hkfm_mod
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
+        NetworkRegistry.INSTANCE.registerGuiHandler(hkfm_mod.instance,new GuiHandler());
 
     }
     @EventHandler
