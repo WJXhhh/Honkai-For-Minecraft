@@ -7,12 +7,13 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IContainerListener;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ITickable;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 
 public class HK_Container {
-    public static class ContainerHk_basic_grinder extends Container{
+    public static class ContainerHk_basic_grinder extends Container implements ITickable {
         private final HK_TileEntities.TileEntity_hk_basic_grinder tileentity;
         private int cookTime,totalCookTime;
 
@@ -38,6 +39,7 @@ public class HK_Container {
         public void addListener(IContainerListener listener) {
             super.addListener(listener);
             listener.sendAllWindowProperties(this,this.tileentity);
+
         }
 
         @Override
@@ -58,6 +60,16 @@ public class HK_Container {
         @SideOnly(Side.CLIENT)
         public void updateProgressBar(int id, int data) {
             super.updateProgressBar(id, data);
+            this.tileentity.setField(id, data);
+
+            if (id == 0) {
+                this.cookTime = data;
+            }
+        }
+
+        @Override
+        public void update() {
+            this.cookTime = this.tileentity.getField(0);
         }
 
         @Override

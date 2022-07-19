@@ -10,6 +10,7 @@ import net.minecraft.item.ItemStack;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class HK_machines_recipes {
     public static class hk_grinderRecipes {
@@ -35,13 +36,18 @@ public class HK_machines_recipes {
         }
 
         public ItemStack getGrinderResult(ItemStack input1){
-            for (Map.Entry<ItemStack, ItemStack> entry : this.grindList.entrySet()){
+            if (Objects.equals(input1.getItem(), Iteminit.HK_Fragment)){
+                return new ItemStack(Iteminit.HK_DUST,1);
+            }
+            return ItemStack.EMPTY;
+
+            /*for (Map.Entry<ItemStack, ItemStack> entry : this.grindList.entrySet()){
                 if(this.compareItemStacks(input1,(ItemStack) entry.getKey())){
                     return (ItemStack) entry.getValue();
 
                 }
             }
-            return ItemStack.EMPTY;
+            return ItemStack.EMPTY;*/
         }
 
         private boolean compareItemStacks(ItemStack stack1,ItemStack stack2){

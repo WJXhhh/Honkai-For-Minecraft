@@ -30,11 +30,12 @@ public class hkfm_mod
 
     @SidedProxy(clientSide = Reference.CLIENT,serverSide = Reference.COMMON)
     public static CommonProxy proxy;
-    private static Logger logger;
+    public static Logger logger;
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
+        logger = event.getModLog();
         GameRegistry.registerWorldGenerator(new Worldgenore2(), 5);
 
     }

@@ -1,8 +1,14 @@
 package com.wjx.hkfm_mod.objects.blocks.special_block;
 
+import com.wjx.hkfm_mod.hkfm_mod;
+import com.wjx.hkfm_mod.init.Iteminit;
+import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.ItemStackHelper;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemAir;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
@@ -11,12 +17,21 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextComponentTranslation;
+import net.minecraftforge.common.util.Constants;
+import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.items.ItemStackHandler;
+
+import javax.annotation.Nonnull;
+import java.util.Objects;
+import java.util.logging.Logger;
 
 public class HK_TileEntities {
     public static class TileEntity_hk_basic_grinder extends TileEntity implements IInventory,ITickable {
         private NonNullList<ItemStack> inventory =NonNullList.<ItemStack>withSize(3,ItemStack.EMPTY);
         private String customName;
+
+
+
 
         private ItemStack grinding = ItemStack.EMPTY;
 
@@ -97,6 +112,7 @@ public class HK_TileEntities {
             this.cookTime = compound.getInteger("CookTime");
             this.totalCookTime = compound.getInteger("CookTimeTotal");
 
+
             if(compound.hasKey("CustomName",8))this.setCustomName(compound.getString("CustomName"));
         }
 
@@ -105,6 +121,7 @@ public class HK_TileEntities {
             super.writeToNBT(compound);
             compound.setInteger("CookTime",(short)this.cookTime);
             compound.setInteger("CookTimeTotal",(short)this.totalCookTime);
+
             ItemStackHelper.saveAllItems(compound,this.inventory);
 
             if (this.hasCustomName()) compound.setString("CustomName",this.customName);
@@ -176,6 +193,7 @@ public class HK_TileEntities {
             return this.cookTime;
             case 1:
             return this.totalCookTime;
+
                 default: return 0;
             }
 
@@ -193,8 +211,19 @@ public class HK_TileEntities {
                     break;
                 case 1 :
                     this.totalCookTime = value;
+
+
             }
         }
+
+        private boolean isAir(ItemStack stack){
+            if(stack == ItemStack.EMPTY){
+                return true;
+            }
+            else return false;
+        }
+
+
 
         @Override
         public int getFieldCount() {
@@ -206,34 +235,105 @@ public class HK_TileEntities {
             this.inventory.clear();
         }
 
+        boolean cooking;
+
         @Override
         public void update() {
-            ItemStack[] inputs = new ItemStack[] {this.inventory.get(0)};
 
-            if(this.canGrind()&&cookTime>0){
+            ItemStack inputs = this.inventory.get(0);
+            hkfm_mod.logger.info("cookTime:"+this.cookTime);
+
+
+            //hkfm_mod.logger.info("INFORMATION FOR 0,IsEmpty:"+this.inventory.get(0).isEmpty()+" ,ItemStack:" + this.inventory.get(0));
+
+
+            if((cookTime>0)){
+
                 cookTime++;
                 if (cookTime == totalCookTime){
                     if(this.inventory.get(1).getCount()>0){
                         this.inventory.get(1).grow(1);
                     }
-                    else handler.insertItem(1,grinding,false);
+                    else insertItem(1,grinding,false);
+
                     grinding = ItemStack.EMPTY;
                     cookTime = 0;
                     return;
                 }
-                else {
-                    if (this.canGrind()){
-                        ItemStack output = HK_machines_recipes.hk_grinderRecipes.getInstance().getGrinderResult(inputs[0]);
-                        if(!output.isEmpty()){
-                            grinding = output;
-                            cookTime++;
-                            inputs[0].shrink(1);
-                            handler.setStackInSlot(0,inputs[0]);
-                        }
+
+                }
+            else {
+
+                if (this.canGrind() && cookTime == 0){
+                    ItemStack output = HK_machines_recipes.hk_grinderRecipes.getInstance().getGrinderResult(inputs);
+                    hkfm_mod.logger.info("LOADED3,output:"+output);
+                    if(!output.isEmpty()){
+
+                        grinding = output;
+                        cookTime++;
+                        inputs.shrink(1);
+                        this.inventory.set(0,inputs);
                     }
                 }
             }
 
         }
+
+        private ItemStack insertItem(int slot, @Nonnull ItemStack stack, boolean simulate)
+        {
+            if (stack.isEmpty())
+                return ItemStack.EMPTY;
+
+
+
+            ItemStack existing = this.inventory.get(slot);
+
+            int limit = getStackLimit(slot, stack);
+
+            if (!existing.isEmpty())
+            {
+                if (!ItemHandlerHelper.canItemStacksStack(stack, existing))
+                    return stack;
+
+                limit -= existing.getCount();
+            }
+
+            if (limit <= 0)
+                return stack;
+
+            boolean reachedLimit = stack.getCount() > limit;
+
+            if (!simulate)
+            {
+                if (existing.isEmpty())
+                {
+                    this.inventory.set(slot, reachedLimit ? ItemHandlerHelper.copyStackWithSize(stack, limit) : stack);
+                }
+                else
+                {
+                    existing.grow(reachedLimit ? limit : stack.getCount());
+                }
+                onContentsChanged(slot);
+            }
+
+            return reachedLimit ? ItemHandlerHelper.copyStackWithSize(stack, stack.getCount()- limit) : ItemStack.EMPTY;
+        }
+
+        protected int getStackLimit(int slot, @Nonnull ItemStack stack)
+        {
+            return Math.min(getSlotLimit(slot), stack.getMaxStackSize());
+        }
+
+        public int getSlotLimit(int slot)
+        {
+            return 64;
+        }
+
+        protected void onContentsChanged(int slot)
+        {
+
+        }
+
+
     }
 }
