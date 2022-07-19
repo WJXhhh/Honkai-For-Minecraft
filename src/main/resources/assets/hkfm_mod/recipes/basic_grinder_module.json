@@ -8,7 +8,7 @@
   "key": {
     "A": {
       "item": "minecraft:stone",
-      "meta": 1
+      "data": 1
     },
     "B": {
       "item": "minecraft:cobblestone"
