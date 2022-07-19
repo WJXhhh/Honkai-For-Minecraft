@@ -1,5 +1,6 @@
 package com.wjx.hkfm_mod.objects.blocks.special_block;
 
+import com.wjx.hkfm_mod.hkfm_mod;
 import com.wjx.hkfm_mod.objects.blocks.special_block.solts.Special_Slot;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -16,6 +17,7 @@ public class HK_Container {
     public static class ContainerHk_basic_grinder extends Container implements ITickable {
         private final HK_TileEntities.TileEntity_hk_basic_grinder tileentity;
         private int cookTime,totalCookTime;
+        private boolean cooking;
 
 
         public ContainerHk_basic_grinder(InventoryPlayer player, HK_TileEntities.TileEntity_hk_basic_grinder tileentity) {
@@ -50,10 +52,13 @@ public class HK_Container {
                 IContainerListener listener = (IContainerListener) this.listeners.get(i);
                 if (cookTime!=this.tileentity.getField(0))listener.sendWindowProperty(this,0,this.tileentity.getField(0));
                 if (totalCookTime != this.tileentity.getField(1)) listener.sendWindowProperty(this,1,this.tileentity.getField(1));
+
             }
 
             this.cookTime = this.tileentity.getField(0);
             this.totalCookTime = this.tileentity.getField(1);
+            this.cooking = this.tileentity.getCooking();
+
         }
 
         @Override
@@ -70,6 +75,15 @@ public class HK_Container {
         @Override
         public void update() {
             this.cookTime = this.tileentity.getField(0);
+            this.cooking = this.tileentity.getCooking();
+            hkfm_mod.logger.info("Container_cooking:"+this.cooking);
+            if (this.tileentity.getField(0) == 0){
+                if (this.cooking != this.tileentity.getCooking() && !this.tileentity.getCooking()){
+                    this.cooking = false;
+                }
+            }else if (this.tileentity.getField(0)>0){
+                this.cooking = true;
+            }
         }
 
         @Override

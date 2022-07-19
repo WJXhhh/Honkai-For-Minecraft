@@ -237,11 +237,19 @@ public class HK_TileEntities {
 
         boolean cooking;
 
+        public boolean getCooking(){
+            return cooking;
+        }
+
         @Override
         public void update() {
 
             ItemStack inputs = this.inventory.get(0);
-            hkfm_mod.logger.info("cookTime:"+this.cookTime);
+            hkfm_mod.logger.info("TileEntity_cooking:"+this.cooking);
+
+            if (cookTime == 0){
+                cooking = false;
+            }
 
 
             //hkfm_mod.logger.info("INFORMATION FOR 0,IsEmpty:"+this.inventory.get(0).isEmpty()+" ,ItemStack:" + this.inventory.get(0));
@@ -255,6 +263,7 @@ public class HK_TileEntities {
                         this.inventory.get(1).grow(1);
                     }
                     else insertItem(1,grinding,false);
+                    cooking=false;
 
                     grinding = ItemStack.EMPTY;
                     cookTime = 0;
@@ -264,10 +273,11 @@ public class HK_TileEntities {
                 }
             else {
 
-                if (this.canGrind() && cookTime == 0){
+                if (this.canGrind() && cookTime == 0&& !cooking){
                     ItemStack output = HK_machines_recipes.hk_grinderRecipes.getInstance().getGrinderResult(inputs);
                     hkfm_mod.logger.info("LOADED3,output:"+output);
-                    if(!output.isEmpty()){
+                    if(!output.isEmpty()&& !cooking){
+                        cooking=true;
 
                         grinding = output;
                         cookTime++;

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " BA",
+    "CBA",
+    " BA"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:stone",
+      "meta": 1
+    },
+    "B": {
+      "item": "minecraft:cobblestone"
+    },
+    "C": {
+      "item": "hkfm_mod:honkai_basic_module"
+    }
+  },
+  "result": {
+    "item": "hkfm_mod:basic_grinder_module",
+    "count": 1
+  }
+}

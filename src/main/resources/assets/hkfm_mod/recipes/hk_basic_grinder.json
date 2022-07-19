@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ACA",
+    "B B",
+    "ACA"
+  ],
+  "key": {
+    "A": {
+      "item": "hkfm_mod:honkai_energy_wire",
+      "meta": 1
+    },
+    "B": {
+      "item": "hkfm_mod:basic_grinder_module"
+    },
+    "C": {
+      "item": "minecraft:cobblestone"
+    }
+  },
+  "result": {
+    "item": "hkfm_mod:hk_basic_grinder",
+    "count": 1
+  }
+}
