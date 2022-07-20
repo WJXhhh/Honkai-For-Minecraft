@@ -17,7 +17,7 @@ public abstract class AbstractGrinderRecipeCategory<T extends IRecipeWrapper> im
 
 
     protected AbstractGrinderRecipeCategory(IGuiHelper helper) {
-            IDrawableStatic staticArrow = helper.createDrawable(TEXTURES,177,1,24,17);
+        IDrawableStatic staticArrow = helper.createDrawable(TEXTURES,177,1,24,17);
         animatedArrow = helper.createAnimatedDrawable(staticArrow,100,IDrawableAnimated.StartDirection.LEFT,false);
 
     }

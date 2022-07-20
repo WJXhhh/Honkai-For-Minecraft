@@ -27,7 +27,7 @@ public class GrinderRecipeCategory extends AbstractGrinderRecipeCategory<Grinder
 
     @Override
     public void drawExtras(Minecraft minecraft) {
-        animatedArrow.draw(minecraft,40,23);
+        animatedArrow.draw(minecraft,62,30);
     }
 
     @Override
@@ -48,8 +48,8 @@ public class GrinderRecipeCategory extends AbstractGrinderRecipeCategory<Grinder
     @Override
     public void setRecipe(IRecipeLayout iRecipeLayout, GrinderRecipe grinderRecipe, IIngredients iIngredients) {
         IGuiItemStackGroup stacks = iRecipeLayout.getItemStacks();
-        stacks.init(input,true,33,41);
-        stacks.init(output,false,105,42);
+        stacks.init(input,true,28,28);
+        stacks.init(output,false,100,29);
         stacks.set(iIngredients);
     }
 }
