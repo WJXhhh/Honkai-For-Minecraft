@@ -22,10 +22,19 @@ public class HK_gui{
         }
 
         @Override
+        public void drawScreen(int mouseX, int mouseY, float partialTicks) {
+            //this.drawDefaultBackground();
+            //this.drawGuiContainerBackgroundLayer(partialTicks,mouseX,mouseY);
+            //this.drawGuiContainerForegroundLayer(mouseX,mouseY);
+            super.drawScreen(mouseX,mouseY,partialTicks);
+            this.renderHoveredToolTip(mouseX,mouseY);
+        }
+
+        @Override
         protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
             String tileName =this.tileentity.getDisplayName().getUnformattedComponentText();
             this.fontRenderer.drawString(tileName,((this.xSize/2 -this.fontRenderer.getStringWidth(tileName)/2)+3),8,4210752);
-            this.renderHoveredToolTip(mouseX,mouseY);
+
         }
 
         @Override
