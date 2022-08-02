@@ -99,7 +99,7 @@ public class HK_TileEntities {
             if(index == 0 && index +1 ==1&&!flag ){
                 ItemStack stack1 = (ItemStack) this.inventory.get(index+1);
                 this.totalCookTime = this.getCookTime(stack);
-                this.cookTime = 0;
+                //this.cookTime = 0;
                 this.markDirty();
             }
         }
@@ -265,9 +265,10 @@ public class HK_TileEntities {
                     else insertItem(1,grinding,false);
                     cooking=false;
 
-                    grinding = ItemStack.EMPTY;
-                    cookTime = 0;
-                    return;
+                        grinding = ItemStack.EMPTY;
+                        cookTime = 0;
+                        return;
+
                 }
 
                 }
