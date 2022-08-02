@@ -25,6 +25,7 @@ public class HK_gui{
         protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
             String tileName =this.tileentity.getDisplayName().getUnformattedComponentText();
             this.fontRenderer.drawString(tileName,((this.xSize/2 -this.fontRenderer.getStringWidth(tileName)/2)+3),8,4210752);
+            this.renderHoveredToolTip(mouseX,mouseY);
         }
 
         @Override
