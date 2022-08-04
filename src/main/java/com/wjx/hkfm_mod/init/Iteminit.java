@@ -17,6 +17,7 @@ public class Iteminit {
     public static final Item HKE_WIRE = new ItemBase("honkai_energy_wire",honkai_tab);
     public static final Item HKB_MODULE = new ItemBase("honkai_basic_module",honkai_tab);
     public static final Item B_GRINDER_MODULE = new ItemBase("basic_grinder_module",honkai_tab);
+    public static final Item B_MT_INJECTOR = new ItemBase("basic_mt_injector_module",honkai_tab);
 
 
 }

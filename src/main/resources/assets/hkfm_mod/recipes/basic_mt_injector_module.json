@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ACA",
+    " B ",
+    "   "
+  ],
+  "key": {
+    "A": {
+      "item": "hkfm_mod:honkai_energy_wire",
+      "meta": 1
+    },
+    "B": {
+      "item": "minecraft:hopper"
+    },
+    "C": {
+      "item": "hkfm_mod:honkai_basic_module"
+    }
+  },
+  "result": {
+    "item": "hkfm_mod:basic_mt_injector_module",
+    "count": 1
+  }
+}

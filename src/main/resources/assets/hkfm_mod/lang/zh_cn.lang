@@ -3,12 +3,15 @@ item.honkai_energy_wire.name=崩坏能传导细线
 item.honkai_basic_module.name=崩坏基础模块
 item.honkai_dust.name=崩坏粉末
 item.basic_grinder_module.name=基础研磨机模块
+item.honkai_steel_ingot.name=崩坏钢锭
 
 tile.stone_for_honkai.name=被崩坏能侵蚀的石头
 tile.hk_basic_grinder.name=崩坏基础研磨机
+tile.mt_b_injector.name=基础材料注入机
 
 itemGroup.honkai_tab=崩坏-世界
 
 container.hk_basic_grinder=崩坏基础研磨机
+container.mt_b_injector=基础材料注入机
 
 jei.recipes.grinder.name=崩坏研磨机

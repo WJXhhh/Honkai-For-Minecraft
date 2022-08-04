@@ -11,7 +11,7 @@ import net.minecraft.util.ResourceLocation;
 public class HK_gui{
 
     public static class GuiHk_basic_grinder extends GuiContainer {
-        private static final ResourceLocation TEXTURES = new ResourceLocation(Reference.MODID + ":textures/gui/mt_injector.png");
+        private static final ResourceLocation TEXTURES = new ResourceLocation(Reference.MODID + ":textures/gui/hk_basic_grinder.png");
         private final InventoryPlayer player;
         private final HK_TileEntities.TileEntity_hk_basic_grinder tileentity;
 
@@ -55,7 +55,7 @@ public class HK_gui{
         }
     }
     public static class GuiMtInjector extends GuiContainer {
-        private static final ResourceLocation TEXTURES = new ResourceLocation(Reference.MODID + ":textures/gui/hk_basic_grinder.png");
+        private static final ResourceLocation TEXTURES = new ResourceLocation(Reference.MODID + ":textures/gui/mt_injector.png");
         private final InventoryPlayer player;
         private final HK_TileEntities.TileEntity_mt_b_injector tileentity;
 

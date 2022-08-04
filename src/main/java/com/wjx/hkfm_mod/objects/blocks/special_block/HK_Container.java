@@ -221,9 +221,9 @@ public class HK_Container {
         public ContainerMtInjector(InventoryPlayer player, HK_TileEntities.TileEntity_mt_b_injector tileentity) {
             this.tileentity = tileentity;
 
-            this.addSlotToContainer(new Slot(tileentity, 0, 21, 25));
+            this.addSlotToContainer(new Slot(tileentity, 0, 25, 21));
             this.addSlotToContainer(new Slot(tileentity,1,25,57));
-            this.addSlotToContainer(new Special_Slot.hk_basic_grinder_output(player.player, tileentity, 1, 98, 39));
+            this.addSlotToContainer(new Special_Slot.hk_basic_grinder_output(player.player, tileentity, 2, 98, 39));
 
             for (int y = 0; y < 3; y++) {
                 for (int x = 0; x < 9; x++) {

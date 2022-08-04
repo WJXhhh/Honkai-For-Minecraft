@@ -3,12 +3,15 @@ item.honkai_energy_wire.name=Honkai Energy Wire
 item.honkai_basic_module.name=Honkai Basic Module
 item.honkai_dust.name=Honkai Dust
 item.basic_grinder_module.name=Basic Grinder Module
+item.honkai_steel_ingot.name=HonKai Steel Ingot
 
 tile.stone_for_honkai.name=Stone Contaminated With Honkai
 tile.hk_basic_grinder.name=Honkai Basic Grinder
+tile.mt_b_injector.name=Material Basic Injector
 
 itemGroup.honkai_tab=HonKai Mod For Minecraft
 
 container.hk_basic_grinder=Honkai Basic Grinder
+container.mt_b_injector=Material Basic Injector
 
 jei.recipes.grinder.name=HonKai Grinder
