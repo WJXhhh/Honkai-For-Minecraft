@@ -1,0 +1,9 @@
+{
+  "variants":
+  {
+    "facing=north": { "model": "hkfm_mod:mt_b_injector" },
+    "facing=east": { "model": "hkfm_mod:mt_b_injector", "y": 90 },
+    "facing=south": { "model": "hkfm_mod:mt_b_injector", "y": 180 },
+    "facing=west": { "model": "hkfm_mod:mt_b_injector", "y": 270 }
+  }
+}

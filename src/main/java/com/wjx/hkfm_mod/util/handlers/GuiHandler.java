@@ -18,6 +18,7 @@ public class GuiHandler implements IGuiHandler {
     @Override
     public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
         if (ID== Reference.GUI_HKB_GRINDER) return new HK_Container.ContainerHk_basic_grinder(player.inventory,(HK_TileEntities.TileEntity_hk_basic_grinder) world.getTileEntity(new BlockPos(x,y,z)));
+        if (ID == Reference.GUI_MT_INJECTOR) return new HK_Container.ContainerMtInjector(player.inventory,(HK_TileEntities.TileEntity_mt_b_injector)world.getTileEntity(new BlockPos(x,y,z)));
         return null;
     }
 
@@ -25,6 +26,7 @@ public class GuiHandler implements IGuiHandler {
     @Override
     public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
         if (ID== Reference.GUI_HKB_GRINDER) return new HK_gui.GuiHk_basic_grinder(player.inventory,(HK_TileEntities.TileEntity_hk_basic_grinder) world.getTileEntity(new BlockPos(x,y,z)));
+        if (ID == Reference.GUI_MT_INJECTOR) return new HK_gui.GuiMtInjector(player.inventory,(HK_TileEntities.TileEntity_mt_b_injector)world.getTileEntity(new BlockPos(x,y,z)));
 
         return null;
     }

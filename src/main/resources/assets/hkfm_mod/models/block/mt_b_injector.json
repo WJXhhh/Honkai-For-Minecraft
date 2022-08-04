@@ -1,0 +1,12 @@
+{
+  "parent": "block/orientable",
+  "textures": {
+    "particle": "hkfm_mod:blocks/hk_basic_grinder_side",
+    "up": "hkfm_mod:blocks/hk_basic_grinder_side",
+    "down": "hkfm_mod:blocks/hk_basic_grinder_side",
+    "north": "hkfm_mod:blocks/mt_b_injector_front",
+    "east": "hkfm_mod:blocks/hk_basic_grinder_side",
+    "south": "hkfm_mod:blocks/hk_basic_grinder_side",
+    "west": "hkfm_mod:blocks/hk_basic_grinder_side"
+  }
+}

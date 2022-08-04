@@ -19,5 +19,7 @@ public class BlockInit {
 
     public static final Block HK_B_GRINDER = new HK_machines.hk_basic_grinder("hk_basic_grinder",honkai_tab);
 
+    public static final Block MT_B_INJECTOR = new HK_machines.mt_b_injector("mt_b_injector",honkai_tab);
+
 
 }

@@ -5,6 +5,7 @@ import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Table;
 import com.wjx.hkfm_mod.init.Iteminit;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
@@ -67,6 +68,25 @@ public class HK_machines_recipes {
             return 0.0F;
         }
     }
+    public static class mtInjector_Recipes {
+        private static final mtInjector_Recipes INSTANCE = new mtInjector_Recipes();
 
+        public static mtInjector_Recipes getInstance(){
+            return INSTANCE;
+        }
 
+        private mtInjector_Recipes(){
+        }
+
+        public ItemStack getMtInjectorResult(ItemStack input1,ItemStack input2){
+            if (input1.getItem() == Iteminit.HK_DUST&&input2.getItem() == Items.IRON_INGOT){
+                return new ItemStack(Iteminit.HK_STEEL_INGOT);
+            }
+            return ItemStack.EMPTY;
+        }
+
+        private boolean compareItemStacks(ItemStack stack1,ItemStack stack2){
+            return stack2.getItem() == stack1.getItem() && (stack2.getMetadata() == 32767 || stack2.getMetadata() == stack1.getMetadata());
+        }
+    }
 }
