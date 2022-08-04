@@ -4,6 +4,7 @@ item.honkai_basic_module.name=Honkai Basic Module
 item.honkai_dust.name=Honkai Dust
 item.basic_grinder_module.name=Basic Grinder Module
 item.honkai_steel_ingot.name=HonKai Steel Ingot
+item.basic_mt_injector_module.name=Basic Material Injector Module
 
 tile.stone_for_honkai.name=Stone Contaminated With Honkai
 tile.hk_basic_grinder.name=Honkai Basic Grinder
@@ -15,3 +16,4 @@ container.hk_basic_grinder=Honkai Basic Grinder
 container.mt_b_injector=Material Basic Injector
 
 jei.recipes.grinder.name=HonKai Grinder
+jei.recipes.mi.name=Material Injector
