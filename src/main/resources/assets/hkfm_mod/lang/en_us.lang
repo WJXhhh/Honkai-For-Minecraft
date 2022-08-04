@@ -5,6 +5,13 @@ item.honkai_dust.name=Honkai Dust
 item.basic_grinder_module.name=Basic Grinder Module
 item.honkai_steel_ingot.name=HonKai Steel Ingot
 item.basic_mt_injector_module.name=Basic Material Injector Module
+item.honkai_steel_hoe.name=HonKai Steel Hoe
+item.honkai_steel_axe.name=HonKai Steel Axe
+item.honkai_steel_pickaxe.name=HonKai Steel Pickaxe
+item.honkai_steel_shovel.name=HonKai Steel Shovel
+item.honkai_steel_sword.name=HonKai Steel Sword
+
+info.hks_sword=§dErosion:Honkai Energy will erosion the enemy,they will die in pain.But you'd better pray that this doesn't happen on you.
 
 tile.stone_for_honkai.name=Stone Contaminated With Honkai
 tile.hk_basic_grinder.name=Honkai Basic Grinder
@@ -15,5 +22,9 @@ itemGroup.honkai_tab=HonKai Mod For Minecraft
 container.hk_basic_grinder=Honkai Basic Grinder
 container.mt_b_injector=Material Basic Injector
 
+effect.erosion=Erosion
+
 jei.recipes.grinder.name=HonKai Grinder
 jei.recipes.mi.name=Material Injector
+
+death.attack.erosion=%s is died of erosion from HonKai Energy

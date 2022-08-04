@@ -1,11 +1,11 @@
 package com.wjx.hkfm_mod;
 
+import com.wjx.hkfm_mod.init.PotionInit;
 import com.wjx.hkfm_mod.proxy.CommonProxy;
 import com.wjx.hkfm_mod.tabs.honkai_tab;
 import com.wjx.hkfm_mod.util.Reference;
 import com.wjx.hkfm_mod.util.handlers.GuiHandler;
 import com.wjx.hkfm_mod.util.handlers.RegistryHandler;
-import com.wjx.hkfm_mod.world.gen.WorldGenCustomOres1;
 import com.wjx.hkfm_mod.world.gen.Worldgenore2;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
@@ -37,6 +37,7 @@ public class hkfm_mod
     {
         logger = event.getModLog();
         GameRegistry.registerWorldGenerator(new Worldgenore2(), 5);
+        PotionInit.registerPotion();
 
     }
 

@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "hkfm_mod:items/hk_steel_pickaxe"
+  }
+}

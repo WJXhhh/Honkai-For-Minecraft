@@ -1,7 +1,12 @@
 package com.wjx.hkfm_mod.init;
 
 import com.wjx.hkfm_mod.objects.item.ItemBase;
+import static com.wjx.hkfm_mod.objects.tools.normalTools.*;
+
+import com.wjx.hkfm_mod.objects.tools.specialtool.hks_axe;
+import com.wjx.hkfm_mod.objects.tools.specialtool.hks_sword;
 import net.minecraft.item.Item;
+import net.minecraftforge.common.util.EnumHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +14,9 @@ import java.util.List;
 import static com.wjx.hkfm_mod.hkfm_mod.honkai_tab;
 
 public class Iteminit {
-    public static final List<Item> ITEMS = new ArrayList<>();
+    public static List<Item> ITEMS = new ArrayList<>();
+
+    public static final Item.ToolMaterial TOOL_HONKAI_STEEL = EnumHelper.addToolMaterial("tool_honkai_steel",3,500,8.0f,2.5f,14);
 
     public static final Item HK_Fragment = new ItemBase("honkai_fragment",honkai_tab);
     public static final Item HK_DUST = new ItemBase("honkai_dust",honkai_tab);
@@ -19,5 +26,10 @@ public class Iteminit {
     public static final Item B_GRINDER_MODULE = new ItemBase("basic_grinder_module",honkai_tab);
     public static final Item B_MT_INJECTOR = new ItemBase("basic_mt_injector_module",honkai_tab);
 
+    public static final Item HKS_HOE = new ToolHoe("honkai_steel_hoe",TOOL_HONKAI_STEEL,honkai_tab);
+    public static final Item HKS_PICKAXE = new ToolPickaxe("honkai_steel_pickaxe",TOOL_HONKAI_STEEL,honkai_tab);
+    public static final Item HKS_SHOVEL = new ToolShovel("honkai_steel_shovel",TOOL_HONKAI_STEEL,honkai_tab);
+    public static final Item HKS_SWORD = new hks_sword(TOOL_HONKAI_STEEL,honkai_tab);
+    public static final Item HKS_AXE = new hks_axe(TOOL_HONKAI_STEEL,honkai_tab);
 
 }

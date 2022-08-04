@@ -5,6 +5,13 @@ item.honkai_dust.name=崩坏粉末
 item.basic_grinder_module.name=基础研磨机模块
 item.honkai_steel_ingot.name=崩坏钢锭
 item.basic_mt_injector_module.name=基础注入机模块
+item.honkai_steel_hoe.name=崩坏钢锄
+item.honkai_steel_axe.name=崩坏钢斧
+item.honkai_steel_pickaxe.name=崩坏钢镐
+item.honkai_steel_shovel.name=崩坏钢锹
+item.honkai_steel_sword.name=崩坏钢剑
+
+info.hks_sword=§d侵蚀：崩坏能会侵蚀你的敌人，它们将在痛苦中消亡。但你最好还是祈祷这种事不会发生在你身上。
 
 tile.stone_for_honkai.name=被崩坏能侵蚀的石头
 tile.hk_basic_grinder.name=崩坏基础研磨机
@@ -15,5 +22,9 @@ itemGroup.honkai_tab=崩坏-世界
 container.hk_basic_grinder=崩坏基础研磨机
 container.mt_b_injector=基础材料注入机
 
+effect.erosion=侵蚀
+
 jei.recipes.grinder.name=崩坏研磨机
 jei.recipes.mi.name=材料注入机
+
+death.attack.erosion=%s被崩坏能侵蚀了
