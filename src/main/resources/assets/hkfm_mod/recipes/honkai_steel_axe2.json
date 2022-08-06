@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " BB",
+    " AB",
+    " A "
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:stick",
+      "data": 1
+    },
+    "B": {
+      "item": "hkfm_mod:honkai_steel_ingot"
+    }
+  },
+  "result": {
+    "item": "hkfm_mod:honkai_steel_axe",
+    "count": 1
+  }
+}
