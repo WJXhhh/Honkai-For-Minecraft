@@ -1,5 +1,6 @@
 package com.wjx.hkfm_mod;
 
+import com.wjx.hkfm_mod.init.EntityInit;
 import com.wjx.hkfm_mod.init.Iteminit;
 import com.wjx.hkfm_mod.init.PotionInit;
 import com.wjx.hkfm_mod.proxy.CommonProxy;
@@ -7,6 +8,7 @@ import com.wjx.hkfm_mod.tabs.honkai_tab;
 import com.wjx.hkfm_mod.util.Reference;
 import com.wjx.hkfm_mod.util.handlers.GuiHandler;
 import com.wjx.hkfm_mod.util.handlers.RegistryHandler;
+import com.wjx.hkfm_mod.util.handlers.RenderHandle;
 import com.wjx.hkfm_mod.world.gen.Worldgenore2;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
@@ -41,6 +43,8 @@ public class hkfm_mod
         GameRegistry.registerWorldGenerator(new Worldgenore2(), 5);
         GameRegistry.addSmelting(new ItemStack(Iteminit.FLOUR,1),new ItemStack(Iteminit.FLOUR_PLACE,1),5);
         PotionInit.registerPotion();
+        EntityInit.registerEntities();
+        RenderHandle.registerEntityRenders();
 
     }
 

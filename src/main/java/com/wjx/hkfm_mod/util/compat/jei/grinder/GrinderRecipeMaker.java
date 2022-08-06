@@ -17,6 +17,7 @@ public class GrinderRecipeMaker {
         GrinderRecipe recipe1 = new GrinderRecipe(new ItemStack(Iteminit.HK_Fragment,1),new ItemStack(Iteminit.HK_DUST,1));
         GrinderRecipe recipe2 = new GrinderRecipe(new ItemStack(Items.WHEAT,1),new ItemStack(Iteminit.FLOUR));
         jeiRecipes.add(recipe1);
+        jeiRecipes.add(recipe2);
 
         return jeiRecipes;
     }

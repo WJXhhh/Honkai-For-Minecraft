@@ -7,8 +7,7 @@
   ],
   "key": {
     "A": {
-      "item": "hkfm_mod:honkai_energy_wire",
-      "meta": 1
+      "item": "hkfm_mod:honkai_energy_wire"
     },
     "B": {
       "item": "minecraft:hopper"

@@ -22,6 +22,8 @@ tile.hk_basic_grinder.name=Honkai Basic Grinder
 tile.mt_b_injector.name=Material Basic Injector
 tile.holy_blood_ore.name=Holy Blood Ore
 
+entity.sickle_deader.name=Sickle Deader
+
 itemGroup.honkai_tab=HonKai Mod For Minecraft
 
 container.hk_basic_grinder=Honkai Basic Grinder

@@ -10,4 +10,6 @@ public class Reference {
 
     public static final int GUI_HKB_GRINDER = 0;
     public static final int GUI_MT_INJECTOR = 1;
+
+    public static final int ENTITY_SICKLE_DEADER = 24860001;
 }

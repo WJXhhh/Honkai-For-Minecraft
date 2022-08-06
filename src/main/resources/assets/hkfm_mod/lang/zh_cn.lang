@@ -22,6 +22,8 @@ tile.hk_basic_grinder.name=崩坏基础研磨机
 tile.mt_b_injector.name=基础材料注入机
 tile.holy_blood_ore.name=含有圣血的矿石
 
+entity.sickle_deader.name=镰刀死士
+
 itemGroup.honkai_tab=崩坏-世界
 
 container.hk_basic_grinder=崩坏基础研磨机
