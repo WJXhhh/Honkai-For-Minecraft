@@ -5,6 +5,7 @@ import com.wjx.hkfm_mod.init.Iteminit;
 import com.wjx.hkfm_mod.objects.blocks.special_block.HK_machines_recipes;
 import mezz.jei.api.IJeiHelpers;
 import mezz.jei.api.recipe.IStackHelper;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
 import java.util.List;
@@ -14,6 +15,7 @@ public class GrinderRecipeMaker {
         List<GrinderRecipe> jeiRecipes = Lists.newArrayList();
 
         GrinderRecipe recipe1 = new GrinderRecipe(new ItemStack(Iteminit.HK_Fragment,1),new ItemStack(Iteminit.HK_DUST,1));
+        GrinderRecipe recipe2 = new GrinderRecipe(new ItemStack(Items.WHEAT,1),new ItemStack(Iteminit.FLOUR));
         jeiRecipes.add(recipe1);
 
         return jeiRecipes;

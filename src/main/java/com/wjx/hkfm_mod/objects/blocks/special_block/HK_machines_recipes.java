@@ -40,15 +40,10 @@ public class HK_machines_recipes {
             if (Objects.equals(input1.getItem(), Iteminit.HK_Fragment)){
                 return new ItemStack(Iteminit.HK_DUST,1);
             }
-            return ItemStack.EMPTY;
-
-            /*for (Map.Entry<ItemStack, ItemStack> entry : this.grindList.entrySet()){
-                if(this.compareItemStacks(input1,(ItemStack) entry.getKey())){
-                    return (ItemStack) entry.getValue();
-
-                }
+            else if(input1.getItem() == Items.WHEAT){
+                return new ItemStack(Iteminit.FLOUR);
             }
-            return ItemStack.EMPTY;*/
+            return ItemStack.EMPTY;
         }
 
         private boolean compareItemStacks(ItemStack stack1,ItemStack stack2){

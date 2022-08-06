@@ -145,19 +145,6 @@ public class HK_TileEntities {
             }
         }
 
-        /*public void grindItem(){
-            if (this.canGrind()){
-                ItemStack input = (ItemStack) this.inventory.get(0);
-                ItemStack result = HK_machines_recipes.hk_grinderRecipes.getInstance().getGrinderResult((ItemStack) this.inventory.get(0));
-                ItemStack output = (ItemStack) this.inventory.get(1);
-
-                if (output.isEmpty()) this.inventory.set(1,result.copy());
-                else if (output.getItem() == result.getItem()) output.grow(result.getCount());
-
-                input.shrink(1);
-            }
-        }*/
-
 
         public boolean isUsableByPlayer(EntityPlayer player) {
             return this.world.getTileEntity(this.pos) == this && player.getDistanceSq((double) this.pos.getX() + 0.5D, (double) this.pos.getY() + 0.5D, (double) this.pos.getZ() + 0.5D) <= 64.0D;
@@ -237,7 +224,6 @@ public class HK_TileEntities {
         public void update() {
 
             ItemStack inputs = this.inventory.get(0);
-            hkfm_mod.logger.info("TileEntity_cooking:"+this.cooking);
 
             if (cookTime == 0){
                 cooking = false;
@@ -268,7 +254,6 @@ public class HK_TileEntities {
 
                 if (this.canGrind() && cookTime == 0&& !cooking){
                     ItemStack output = HK_machines_recipes.hk_grinderRecipes.getInstance().getGrinderResult(inputs);
-                    hkfm_mod.logger.info("LOADED3,output:"+output);
                     if(!output.isEmpty()&& !cooking){
                         cooking=true;
 

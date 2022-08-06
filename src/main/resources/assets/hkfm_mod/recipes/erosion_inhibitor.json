@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " A ",
+    "ABA",
+    " A "
+  ],
+  "key": {
+    "A": {
+      "item": "hkfm_mod:flour_place",
+      "meta": 1
+    },
+    "B": {
+      "item": "hkfm_mod:holy_blood"
+    }
+  },
+  "result": {
+    "item": "hkfm_mod:erosion_inhibitor",
+    "count": 8
+  }
+}

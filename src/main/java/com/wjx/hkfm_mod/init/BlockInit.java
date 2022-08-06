@@ -16,6 +16,7 @@ public class BlockInit {
     public static final List<Block> Blocks = new ArrayList<>();
 
     public static final Block BLOCKS_STONE_FOR_HONKAI = new HK_Ores.HK_ORE_stone_for_honkai("stone_for_honkai", Material.ROCK,honkai_tab);
+    public static final Block HOLY_BLOOD_ORE = new HK_Ores.HK_ORE_HolyBloodOre("holy_blood_ore",Material.ROCK,honkai_tab);
 
     public static final Block HK_B_GRINDER = new HK_machines.hk_basic_grinder("hk_basic_grinder",honkai_tab);
 

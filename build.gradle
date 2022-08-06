@@ -137,3 +137,11 @@ publishing {
         }
     }
 }
+
+sourceSets {
+    main {
+        output.resourcesDir = output.classesDir
+    }
+}
+
+compileJava.options.encoding = 'UTF-8'

@@ -5,6 +5,7 @@ import com.wjx.hkfm_mod.init.Iteminit;
 import com.wjx.hkfm_mod.util.interfaces.IHasModel;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -47,6 +48,7 @@ public class RegistryHandler {
         }
 
     }
+
 
     public static void otherRegistries(){
 

@@ -32,8 +32,6 @@ public class PotionErosion extends Potion {
     public void performEffect(EntityLivingBase entityLivingBaseIn, int amplifier) {
         super.performEffect(entityLivingBaseIn,amplifier);
         entityLivingBaseIn.attackEntityFrom(Honkai_DamageSource.Erosion,1);
-
-        logger.info("damage!");
     }
 
     @SideOnly(Side.CLIENT)
