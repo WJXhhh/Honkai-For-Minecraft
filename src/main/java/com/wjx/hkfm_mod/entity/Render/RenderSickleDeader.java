@@ -6,6 +6,8 @@ import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelPlayer;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.client.renderer.entity.layers.LayerArrow;
+import net.minecraft.client.renderer.entity.layers.LayerHeldItem;
 import net.minecraft.util.ResourceLocation;
 
 import javax.annotation.Nullable;
@@ -15,6 +17,7 @@ public class RenderSickleDeader extends RenderLiving<EntitySickleDeader> {
 
     public RenderSickleDeader(RenderManager manager){
         super(manager,new ModelPlayer(0.5f,true),0.5f);
+        this.addLayer(new LayerHeldItem(this));
     }
 
     @Nullable

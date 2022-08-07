@@ -14,6 +14,7 @@ item.flour.name=面粉
 item.flour_place.name=面片
 item.holy_blood.name=圣血
 item.erosion_inhibitor.name=崩坏侵蚀抑制剂
+item.basic_sickle.name=基础镰刀
 
 info.hks_sword=§d侵蚀：崩坏能会侵蚀你的敌人，它们将在痛苦中消亡。但你最好还是祈祷这种事不会发生在你身上。
 
@@ -22,7 +23,7 @@ tile.hk_basic_grinder.name=崩坏基础研磨机
 tile.mt_b_injector.name=基础材料注入机
 tile.holy_blood_ore.name=含有圣血的矿石
 
-entity.sickle_deader.name=镰刀死士
+entity.sickle_deader.name=守卫死士
 
 itemGroup.honkai_tab=崩坏-世界
 

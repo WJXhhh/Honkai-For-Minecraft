@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "name": "1",
+      "rolls": {
+        "min": 1,
+        "max": 2
+      },
+      "entries": [
+        {
+          "type": "item",
+          "name": "hkfm_mod:honkai_fragment",
+          "weight": 2
+        },
+        {
+          "type": "item",
+          "name": "hkfm_mod:basic_sickle",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

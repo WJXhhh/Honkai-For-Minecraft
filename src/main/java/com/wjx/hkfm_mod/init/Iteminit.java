@@ -4,11 +4,13 @@ import com.wjx.hkfm_mod.objects.item.ItemBase;
 import static com.wjx.hkfm_mod.objects.tools.normalTools.*;
 
 import com.wjx.hkfm_mod.objects.item.SFood.FoodErosionInhibitor;
+import com.wjx.hkfm_mod.objects.tools.MeleeWeaponBase;
 import com.wjx.hkfm_mod.objects.tools.specialtool.hks_axe;
 import com.wjx.hkfm_mod.objects.tools.specialtool.hks_sword;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemHoe;
+import net.minecraft.item.ItemTool;
 import net.minecraftforge.common.util.EnumHelper;
 
 import java.util.ArrayList;
@@ -20,6 +22,7 @@ public class Iteminit {
     public static List<Item> ITEMS = new ArrayList<>();
 
     public static final Item.ToolMaterial TOOL_HONKAI_STEEL = EnumHelper.addToolMaterial("tool_honkai_steel",3,500,8.0f,2.5f,14);
+    //public static final Item.ToolMaterial BASIC_SICKLE = EnumHelper.addToolMaterial("basic_sickle",2,300,5f,3f,14);
 
     public static final Item HK_Fragment = new ItemBase("honkai_fragment",honkai_tab);
     public static final Item HK_DUST = new ItemBase("honkai_dust",honkai_tab);
@@ -37,6 +40,8 @@ public class Iteminit {
     public static final Item HKS_SHOVEL = new ToolShovel("honkai_steel_shovel",TOOL_HONKAI_STEEL,honkai_tab);
     public static final Item HKS_SWORD = new hks_sword(TOOL_HONKAI_STEEL,honkai_tab);
     public static final Item HKS_AXE = new hks_axe(TOOL_HONKAI_STEEL,honkai_tab);
+
+    public static final Item BASIC_SICKLE = new MeleeWeaponBase("basic_sickle",200,7,honkai_tab,14,1);
 
     public static final ItemFood EROSION_INHIBITOR = new FoodErosionInhibitor("erosion_inhibitor",honkai_tab,1,1,false);
 
