@@ -12,4 +12,8 @@ public class Reference {
     public static final int GUI_MT_INJECTOR = 1;
 
     public static final int ENTITY_SICKLE_DEADER = 24860001;
+    public static final int ENTITY_RANGER_DEADER = 24860002;
+    public static final int ENTITY_FREEZY_SICKLE_DEADER = 24860003;
+    public static final int ENTITY_FREEZY_SICKLE_MOB = 24860004;
+    public static final int ENTITY_DUTIFUL_NINJA_DEADER = 24860005;
 }

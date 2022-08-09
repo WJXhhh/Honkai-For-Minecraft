@@ -1,0 +1,7 @@
+{
+  "parent": "hkfm_mod:custom/basic_katana",
+  "textures": {
+    "1": "hkfm_mod:custom/colour/ju_huang",
+    "0": "hkfm_mod:custom/colour/black"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "hkfm_mod:custom/basic_sickle",
+  "textures": {
+    "1": "hkfm_mod:custom/colour/freezy_light_blue",
+    "2": "hkfm_mod:custom/colour/freezy_blue",
+    "3": "hkfm_mod:custom/colour/black"
+  }
+}

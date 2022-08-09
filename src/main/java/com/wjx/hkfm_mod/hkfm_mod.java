@@ -56,8 +56,7 @@ public class hkfm_mod
     public void init(FMLInitializationEvent event)
     {
         NetworkRegistry.INSTANCE.registerGuiHandler(hkfm_mod.instance,new GuiHandler());
-
-
+        proxy.init(event);
     }
     @EventHandler
     public void postinit(FMLPostInitializationEvent event){}

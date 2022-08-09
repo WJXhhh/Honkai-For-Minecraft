@@ -1,0 +1,7 @@
+{
+  "parent": "hkfm_mod:custom/basic_bow",
+  "textures": {
+    "1": "hkfm_mod:custom/colour/ju_huang",
+    "2": "hkfm_mod:custom/colour/black"
+  }
+}

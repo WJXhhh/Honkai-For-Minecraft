@@ -1,33 +1,32 @@
 package com.wjx.hkfm_mod.entity.honkaiEnemy;
 
+import com.wjx.hkfm_mod.entity.honkaiEnemy.throwEntity.EntityFreezySickleMob;
 import com.wjx.hkfm_mod.init.Iteminit;
 import com.wjx.hkfm_mod.init.PotionInit;
-import com.wjx.hkfm_mod.util.Reference;
 import com.wjx.hkfm_mod.util.handlers.LootTableHandler;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.*;
 import net.minecraft.entity.monster.EntityMob;
-import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.projectile.EntityTippedArrow;
 import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
 
-public class EntitySickleDeader extends EntityMob {
-    public EntitySickleDeader(World worldIn){
+public class EntityFreezySickleDeader extends EntityMob {
+    public EntityFreezySickleDeader(World worldIn){
         super(worldIn);
         setSize(0.6f, 1.8f);
         setHeldItem(EnumHand.MAIN_HAND,new ItemStack(Iteminit.BASIC_SICKLE,1));
-        this.setItemStackToSlot(EntityEquipmentSlot.MAINHAND, new ItemStack(Iteminit.BASIC_SICKLE, (int) (1)));
+        this.setItemStackToSlot(EntityEquipmentSlot.MAINHAND, new ItemStack(Iteminit.FREEZY_SICKLE, (int) (1)));
     }
 
     @Nullable
@@ -71,16 +70,31 @@ public class EntitySickleDeader extends EntityMob {
     @Nullable
     @Override
     protected ResourceLocation getLootTable() {
-        return LootTableHandler.SICKLE_DEADER;
+        return LootTableHandler.FREEZY_SICKLE_DEADER;
+    }
+
+    {
+        this.getEntityData().setDouble("skill",0);
     }
 
     @Override
     public void onEntityUpdate() {
         super.onEntityUpdate();
+        NBTTagCompound data = this.getEntityData();
         if (this.getActivePotionEffect(PotionInit.EROSION) != null){
             this.removePotionEffect(PotionInit.EROSION);
         }
+        if (data.getDouble("skill") >= 200){
+            data.setDouble("skill",0);
+            if (this.getAttackTarget() != null){
+                EntityFreezySickleMob entityarrow = new EntityFreezySickleMob(this.world, this);
+                entityarrow.shoot(this.getLookVec().x, this.getLookVec().y, this.getLookVec().z, 1.6F, 12.0F);
+                entityarrow.setDamage(3);
+                this.world.spawnEntity(entityarrow);
+            }
+        }
+        else {
+            data.setDouble("skill",data.getDouble("skill")+1);
+        }
     }
-
-
 }

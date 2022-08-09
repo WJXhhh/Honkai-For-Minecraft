@@ -5,6 +5,8 @@ import static com.wjx.hkfm_mod.objects.tools.normalTools.*;
 
 import com.wjx.hkfm_mod.objects.item.SFood.FoodErosionInhibitor;
 import com.wjx.hkfm_mod.objects.tools.MeleeWeaponBase;
+import com.wjx.hkfm_mod.objects.tools.specialtool.FreezySickle;
+import com.wjx.hkfm_mod.objects.tools.specialtool.basic_bow;
 import com.wjx.hkfm_mod.objects.tools.specialtool.hks_axe;
 import com.wjx.hkfm_mod.objects.tools.specialtool.hks_sword;
 import net.minecraft.item.Item;
@@ -42,6 +44,9 @@ public class Iteminit {
     public static final Item HKS_AXE = new hks_axe(TOOL_HONKAI_STEEL,honkai_tab);
 
     public static final Item BASIC_SICKLE = new MeleeWeaponBase("basic_sickle",200,7,honkai_tab,14,1);
+    public static final Item FREEZY_SICKLE = new FreezySickle("freezy_sickle",200,7,honkai_tab,14,1);
+    public static final Item BASIC_BOW = new basic_bow("basic_bow");
+    public static final Item BASIC_KATANA = new MeleeWeaponBase("basic_katana",200,5,honkai_tab,14,2);
 
     public static final ItemFood EROSION_INHIBITOR = new FoodErosionInhibitor("erosion_inhibitor",honkai_tab,1,1,false);
 

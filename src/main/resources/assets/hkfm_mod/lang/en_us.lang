@@ -15,6 +15,9 @@ item.flour_place.name=Flour Place
 item.holy_blood.name=Holy Blood
 item.erosion_inhibitor.name=Erosion Inhibitor
 item.basic_sickle.name=Basic Sickle
+item.basic_bow.name=Basic Bow
+item.freezy_sickle.name=Freezy Sickle
+item.basic_katana.name=Basic Katana
 
 info.hks_sword=§dErosion:Honkai Energy will erosion the enemy,they will die in pain.But you'd better pray that this doesn't happen on you.
 
@@ -24,6 +27,9 @@ tile.mt_b_injector.name=Material Basic Injector
 tile.holy_blood_ore.name=Holy Blood Ore
 
 entity.sickle_deader.name=Guarder Deader
+entity.ranger_deader.name=Ranger Deader
+entity.freezy_sickle_deader.name=The Freezy Sickle Deader
+entity.dutiful_ninja_deader.name=Dutiful Ninja Deader
 
 itemGroup.honkai_tab=HonKai Mod For Minecraft
 
@@ -36,3 +42,5 @@ jei.recipes.grinder.name=HonKai Grinder
 jei.recipes.mi.name=Material Injector
 
 death.attack.erosion=%s is died of erosion from HonKai Energy
+
+nbt.honkai_freeze=Your Freeze Count is
