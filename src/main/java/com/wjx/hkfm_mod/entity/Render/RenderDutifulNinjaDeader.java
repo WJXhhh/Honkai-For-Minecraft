@@ -15,7 +15,7 @@ public class RenderDutifulNinjaDeader extends RenderLiving<EntityDutifulNinjaDea
     public static final ResourceLocation TEXTURE = new ResourceLocation(Reference.MODID + ":textures/entity/dutiful_ninja_deader.png");
 
     public RenderDutifulNinjaDeader(RenderManager manager){
-        super(manager,new ModelPlayer(0.5f,true),0.5f);
+        super(manager,new ModelPlayer(0,true),0.5f);
         this.addLayer(new LayerHeldItem(this));
     }
 

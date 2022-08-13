@@ -17,7 +17,7 @@ public class RenderHandlerHelper {
 
 
         public RenderLivingPlayerModHeldItem(RenderManager manager,ResourceLocation res){
-            super(manager,new ModelPlayer(0.5f,true),0.5f);
+            super(manager,new ModelPlayer(0,true),0.5f);
             TEXTURE = res;
             this.addLayer(new LayerHeldItem(this));
         }

@@ -1,6 +1,7 @@
 package com.wjx.hkfm_mod.objects.tools.specialtool;
 
 import com.wjx.hkfm_mod.objects.tools.MeleeWeaponBase;
+import net.minecraft.client.renderer.entity.RenderGiantZombie;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.MobEffects;

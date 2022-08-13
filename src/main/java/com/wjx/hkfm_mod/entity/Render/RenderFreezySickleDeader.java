@@ -15,7 +15,7 @@ public class RenderFreezySickleDeader extends RenderLiving<EntityFreezySickleDea
     public static final ResourceLocation TEXTURE = new ResourceLocation(Reference.MODID + ":textures/entity/freezy_sickle_deader.png");
 
     public RenderFreezySickleDeader(RenderManager manager){
-        super(manager,new ModelPlayer(0.5f,true),0.5f);
+        super(manager,new ModelPlayer(0,true),0.5f);
         this.addLayer(new LayerHeldItem(this));
     }
 

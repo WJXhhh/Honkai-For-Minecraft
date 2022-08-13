@@ -4,6 +4,7 @@ import com.wjx.hkfm_mod.objects.item.ItemBase;
 import net.minecraft.client.renderer.entity.RenderArrow;
 import net.minecraft.client.renderer.entity.RenderTippedArrow;
 import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.enchantment.EnumEnchantmentType;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -23,6 +24,10 @@ import static com.wjx.hkfm_mod.hkfm_mod.honkai_tab;
 public class basic_bow extends ItemBase {
     public basic_bow(String name) {
         super(name,honkai_tab);
+        setMaxStackSize(1);
+        canApplyAtEnchantingTable(new ItemStack(this),Enchantments.POWER);
+        canApplyAtEnchantingTable(new ItemStack(this),Enchantments.PUNCH);
+        canApplyAtEnchantingTable(new ItemStack(this),Enchantments.FLAME);
     }
 
     @Override

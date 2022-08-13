@@ -1,10 +1,7 @@
 package com.wjx.hkfm_mod.util.handlers;
 
 import com.wjx.hkfm_mod.entity.Render.*;
-import com.wjx.hkfm_mod.entity.honkaiEnemy.EntityDutifulNinjaDeader;
-import com.wjx.hkfm_mod.entity.honkaiEnemy.EntityFreezySickleDeader;
-import com.wjx.hkfm_mod.entity.honkaiEnemy.EntityRangerDeader;
-import com.wjx.hkfm_mod.entity.honkaiEnemy.EntitySickleDeader;
+import com.wjx.hkfm_mod.entity.honkaiEnemy.*;
 import com.wjx.hkfm_mod.entity.honkaiEnemy.throwEntity.EntityFreezySickleMob;
 import com.wjx.hkfm_mod.util.Reference;
 import net.minecraft.client.model.ModelPlayer;
@@ -54,6 +51,8 @@ public class RenderHandle {
                 return new RenderDutifulNinjaDeader(manager);
             }
         });
+        RenderingRegistry.registerEntityRenderingHandler(EntityDeathSpawnDeader.class, RenderDeathSpawnDeader::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityBlackLightDeathSpawnDeader.class, RenderBlackLightDeathSpawnDeader::new);
         new regplayer<EntityFreezySickleDeader>(EntityFreezySickleDeader.class,new ResourceLocation(Reference.MODID + ":textures/entity/freezy_sickle_deader.png"));
 
     }

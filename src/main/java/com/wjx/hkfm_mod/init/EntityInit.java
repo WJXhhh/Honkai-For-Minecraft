@@ -1,9 +1,6 @@
 package com.wjx.hkfm_mod.init;
 
-import com.wjx.hkfm_mod.entity.honkaiEnemy.EntityDutifulNinjaDeader;
-import com.wjx.hkfm_mod.entity.honkaiEnemy.EntityFreezySickleDeader;
-import com.wjx.hkfm_mod.entity.honkaiEnemy.EntityRangerDeader;
-import com.wjx.hkfm_mod.entity.honkaiEnemy.EntitySickleDeader;
+import com.wjx.hkfm_mod.entity.honkaiEnemy.*;
 import com.wjx.hkfm_mod.entity.honkaiEnemy.throwEntity.EntityFreezySickleMob;
 import com.wjx.hkfm_mod.hkfm_mod;
 import com.wjx.hkfm_mod.objects.tools.specialtool.basic_bow;
@@ -29,11 +26,12 @@ public class EntityInit {
         registerEntity("freezy_sickle_deader", EntityFreezySickleDeader.class,Reference.ENTITY_FREEZY_SICKLE_DEADER,50,34122243,34122242);
         registerEntity("freezy_sickle_mob", EntityFreezySickleMob.class,Reference.ENTITY_FREEZY_SICKLE_MOB,50);
         registerEntity("dutiful_ninja_deader", EntityDutifulNinjaDeader.class,Reference.ENTITY_DUTIFUL_NINJA_DEADER,50,34122243,34122242);
+        registerEntity("death_spawn_deader", EntityDeathSpawnDeader.class,24860006,50,34122243,34122242);
+        registerEntity("black_light_death_spawn_deader",EntityBlackLightDeathSpawnDeader.class,24860007,50);
         registerEntitySpawn(EntitySickleDeader.class,13,1,2,EnumCreatureType.MONSTER,spawnBiomes1);
         registerEntitySpawn(EntityRangerDeader.class,13,1,2,EnumCreatureType.MONSTER,spawnBiomes1);
         registerEntitySpawn(EntityDutifulNinjaDeader.class,13,1,2,EnumCreatureType.MONSTER,spawnBiomes1);
         registerEntitySpawn(EntityFreezySickleDeader.class,13,1,2,EnumCreatureType.MONSTER,spawnBiomesIce);
-
     }
 
     //range ：追踪范围
